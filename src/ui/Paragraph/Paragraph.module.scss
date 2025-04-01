@@ -1,0 +1,24 @@
+@use "@/styles/abstracts/variables" as *;
+
+.paragraph {
+  color: $gray;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.sm {
+  font-size: 12px;
+}
+
+.md {
+  font-size: 14px;
+}
+
+.lg {
+  font-size: 18px;
+  line-height: 32px;
+}

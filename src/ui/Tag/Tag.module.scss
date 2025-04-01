@@ -1,0 +1,27 @@
+@use "@/styles/abstracts/variables" as *;
+
+.tag {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 20px;
+  color: $black;
+}
+
+.sm {
+  line-height: 100%;
+  font-size: 12px;
+}
+
+.md {
+  line-height: 14px;
+  font-size: 12px;
+}
+
+.ghost {
+  color: $gray-light;
+}
+
+.gray {
+  color: $gray;
+}

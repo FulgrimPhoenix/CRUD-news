@@ -1,0 +1,32 @@
+.button {
+  background: none;
+  border: none;
+  border-radius: 8px;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+
+  &.sm {
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  &.md {
+    padding: 8px;
+
+    font-size: 16px;
+  }
+
+  &.lg {
+    padding: 16px;
+    font-size: 24px;
+  }
+
+  .title {
+    display: inline-block;
+    min-width: 70px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

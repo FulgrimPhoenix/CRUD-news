@@ -1,0 +1,41 @@
+@use "@/styles/abstracts/variables.scss" as *;
+
+.h1 {
+  color: $black;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.h2 {
+  color: $black;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 100%;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.h3 {
+  color: $black;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 100%;
+  margin: 0 0 26px;
+  padding: 0;
+}
+
+.h4 {
+  color: $black;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 100%;
+  margin: 0 0 6px;
+  padding: 0;
+}

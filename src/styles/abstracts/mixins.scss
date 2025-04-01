@@ -1,0 +1,37 @@
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-between($direction) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: $direction;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@mixin flex-row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin grid-display($columns, $row, $column-size, $gap) {
+  display: grid;
+  gap: $gap;
+  grid-auto-rows: $row;
+  grid-template-columns: repeat($columns, $column-size);
+}
+
+@mixin hover-state {
+  &:hover {
+    opacity: 0.7;
+  }
+}

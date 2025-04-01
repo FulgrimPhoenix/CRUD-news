@@ -1,0 +1,15 @@
+@use "@/styles/abstracts/variables.scss" as *;
+@use "@/styles/abstracts/mixins.scss" as *;
+
+.article {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  .tag-bar {
+    @include flex-row;
+    justify-content: flex-start;
+    margin: 0 0 6px;
+  }
+}
