@@ -13,11 +13,8 @@
 
 body {
   background-color: var(--white);
-  margin: 0 auto;
-  min-height: 100vh;
-  min-width: 320px;
   font-family: "Exo 2";
   font-weight: 400;
-  padding: 0 12px;
-  max-width: map.get($breakpoints, "mobile");
+  margin: 0;
+  position: relative;
 }

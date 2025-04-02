@@ -18,8 +18,17 @@ const articleSlice = createSlice({
       localStorage.setItem("articles", JSON.stringify(newArticleList));
       return newArticleList;
     },
+    editArticle: (state, action: PayloadAction<IArticleParams>) => {
+      const targetArticleIndex = state.findIndex(
+        (el) => el.date === action.payload.date
+      );
+      if (targetArticleIndex !== -1) {
+        state[targetArticleIndex] = action.payload;
+        localStorage.setItem("articles", JSON.stringify(state));
+      }
+    },
   },
 });
 
-export const { addArticle, deleteArticle } = articleSlice.actions;
+export const { addArticle, deleteArticle, editArticle } = articleSlice.actions;
 export default articleSlice;

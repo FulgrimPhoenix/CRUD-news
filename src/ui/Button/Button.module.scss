@@ -9,7 +9,7 @@
   font-size: 15px;
   line-height: 140%;
   font-weight: 700;
-  transition: background 0.2s;
+  transition: opacity 0.2s;
   background-color: $black;
   color: $white;
   justify-content: center;
@@ -17,8 +17,13 @@
   height: 48px;
   width: 100%;
   min-width: 229px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-.button:hover {
-  background-color: $gray;
+.ghost {
+  background-color: #fff;
+  color: $black;
 }

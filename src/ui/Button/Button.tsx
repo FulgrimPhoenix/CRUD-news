@@ -12,12 +12,16 @@ interface IButton
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
+  ghost?: boolean;
   children: ReactNode;
 }
 
 const Button: FC<IButton> = (props) => {
   return (
-    <button className={cn(styles.button)} {...props}>
+    <button
+      className={cn(styles.button, { [styles.ghost]: props.ghost })}
+      {...props}
+    >
       {props.children}
     </button>
   );

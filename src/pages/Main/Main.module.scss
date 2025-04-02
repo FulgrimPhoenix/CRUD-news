@@ -1,0 +1,7 @@
+@use "@/styles/abstracts/variables.scss" as *;
+@use "sass:map";
+
+.main {
+  max-width: map.get($breakpoints, "mobile");
+  margin: 0 auto;
+}

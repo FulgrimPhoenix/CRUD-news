@@ -1,0 +1,12 @@
+@use "@/styles/abstracts/variables.scss" as *;
+@use "sass:map";
+
+.popup {
+  width: 100%;
+  max-width: map.get($breakpoints, "mobile");
+  margin: auto;
+  background-color: $white;
+  padding: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
