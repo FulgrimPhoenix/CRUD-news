@@ -2,10 +2,13 @@ import { ArticleForm, ArticleList } from "@/components";
 import { Title } from "@/ui";
 import cn from "classnames";
 import styles from "./Main.module.scss";
+import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
 
-function App() {
+const Main: FC<
+  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+> = ({ ...props }) => {
   return (
-    <div className={cn(styles.main)}>
+    <div className={cn(styles.main)} {...props}>
       <Title tag="h1" style={{ margin: "20px 0" }}>
         CRUD News
       </Title>
@@ -13,6 +16,6 @@ function App() {
       <ArticleList />
     </div>
   );
-}
+};
 
-export default App;
+export default Main;
