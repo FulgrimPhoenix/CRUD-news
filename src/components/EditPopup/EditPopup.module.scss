@@ -2,7 +2,7 @@
 @use "sass:map";
 
 .popup {
-  width: 100%;
+  width: 95%;
   max-width: map.get($breakpoints, "mobile");
   margin: auto;
   background-color: $white;

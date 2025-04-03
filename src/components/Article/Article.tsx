@@ -8,6 +8,7 @@ import { useAppDispatch } from "@/store/store";
 import { deleteArticle } from "@/features/articles/articlesSlice";
 import useModalContext from "@/hooks/usePopup";
 import { EditPopup } from "@/components";
+import { convertDate } from "@/helpers/dateConvertor";
 
 interface IArticle
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -17,13 +18,7 @@ interface IArticle
 const Article: FC<IArticle> = ({ articleParams, ...props }) => {
   const dispatch = useAppDispatch();
   const { open } = useModalContext();
-  const convertedTime = new Date(articleParams.date).toLocaleString("ru-RU", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const convertedTime = convertDate(articleParams.date);
 
   const handleDelete = () => {
     dispatch(deleteArticle(articleParams.date));
