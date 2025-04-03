@@ -22,9 +22,9 @@ const useModalContext = () => {
         }
 
         const modalContainer = document.createElement("div");
-        modalContainer.style.position = "absolute";
+        modalContainer.style.position = "fixed";
         modalContainer.style.backgroundColor = "rgb(0, 0, 0, 0.9)";
-        modalContainer.style.top = "-20px";
+        modalContainer.style.top = "0px";
         modalContainer.style.width = "100%";
         modalContainer.style.minHeight = "100vh";
         modalContainer.style.display = "flex";

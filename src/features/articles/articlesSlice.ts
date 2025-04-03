@@ -1,9 +1,11 @@
+import {
+  getArticlesFromLocalStorage,
+  setArticleToLocalStorage,
+} from "@/helpers/localstorageActions";
 import { IArticleParams } from "@/types/article.types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: IArticleParams[] = JSON.parse(
-  localStorage.getItem("articles") || "[]"
-);
+const initialState: IArticleParams[] = getArticlesFromLocalStorage();
 
 const articleSlice = createSlice({
   name: "articles",
@@ -11,11 +13,11 @@ const articleSlice = createSlice({
   reducers: {
     addArticle: (state, action: PayloadAction<IArticleParams>) => {
       state.push(action.payload);
-      localStorage.setItem("articles", JSON.stringify(state));
+      setArticleToLocalStorage(state);
     },
     deleteArticle: (state, action: PayloadAction<IArticleParams["date"]>) => {
       const newArticleList = state.filter((el) => el.date !== action.payload);
-      localStorage.setItem("articles", JSON.stringify(newArticleList));
+      setArticleToLocalStorage(newArticleList);
       return newArticleList;
     },
     editArticle: (state, action: PayloadAction<IArticleParams>) => {
@@ -24,7 +26,7 @@ const articleSlice = createSlice({
       );
       if (targetArticleIndex !== -1) {
         state[targetArticleIndex] = action.payload;
-        localStorage.setItem("articles", JSON.stringify(state));
+        setArticleToLocalStorage(state);
       }
     },
   },
